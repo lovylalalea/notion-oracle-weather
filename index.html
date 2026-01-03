@@ -10,11 +10,14 @@
       padding: 20px;
       background: none;
       font-family: "Tinos", serif;
-      color: #d69eee;
+      color: #b38ce6;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+
+      /* THE MAGIC LINE */
+      overflow: hidden;
     }
 
     .oracle-wrapper {
@@ -40,15 +43,15 @@
       font-size: 18px;
       margin-bottom: 18px;
       line-height: 1.6;
-      color: #e8dfff;
-      text-shadow: 0 0 6px rgba(214, 158, 238, 0.4);
+      color: #b38ce6;
+      text-shadow: 0 0 6px rgba(179, 140, 230, 0.35);
     }
 
     .oracle-note {
       font-size: 13px;
-      opacity: 0.8;
+      opacity: 0.85;
       margin-top: 6px;
-      color: #d8cfff;
+      color: #b38ce6;
       line-height: 1.5;
     }
 
@@ -62,10 +65,8 @@
 
   <div class="oracle-wrapper">
 
-    <!-- LEFT: Transparent Hand Image -->
     <img class="oracle-image" src="https://i.imgur.com/zuLgkRB.png" alt="Oracle Hand" />
 
-    <!-- RIGHT: Whisper + Weather + Note -->
     <div class="oracle-right">
 
       <div class="oracle-whisper">
@@ -81,7 +82,7 @@
            data-theme="original"
            data-icons="none"
            data-basecolor="rgba(0,0,0,0)"
-           data-textcolor="#d69eee"
+           data-textcolor="#b38ce6"
            data-highcolor="#ffa7d2"
            data-lowcolor="#c7deff"
            data-suncolor="#f4d799">
