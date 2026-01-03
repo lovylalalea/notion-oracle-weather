@@ -7,37 +7,49 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
-      height: 100vh;
-      width: 100vw;
-      background: url('https://i.imgur.com/btVUuxb.png') no-repeat left center;
-      background-size: cover;
-      background-color: #0f1113;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+      padding: 20px;
+      background: #0f1113;
       font-family: "Tinos", serif;
       color: #d69eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
-    .oracle-panel {
-      width: 40%;
-      max-width: 420px;
-      padding: 30px;
-      padding-right: 50px;
+    .oracle-wrapper {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      max-width: 1000px;
+    }
+
+    .oracle-image {
+      width: 360px;
+      filter: drop-shadow(0 0 25px rgba(214, 158, 238, 0.45));
+    }
+
+    .oracle-right {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      background: rgba(15, 17, 19, 0.45);
-      backdrop-filter: blur(4px);
-      border-left: 1px solid rgba(214, 158, 238, 0.25);
+      justify-content: center;
+      max-width: 380px;
     }
 
     .oracle-whisper {
       font-size: 18px;
+      margin-bottom: 18px;
       line-height: 1.6;
       color: #e8dfff;
       text-shadow: 0 0 6px rgba(214, 158, 238, 0.4);
+    }
+
+    .oracle-note {
+      font-size: 13px;
+      opacity: 0.8;
+      margin-top: 6px;
+      color: #d8cfff;
+      line-height: 1.5;
     }
 
     .widget-container {
@@ -48,29 +60,40 @@
 
 <body>
 
-  <div class="oracle-panel">
+  <div class="oracle-wrapper">
 
-    <div class="oracle-whisper">
-      𝑾𝒉𝒆𝒏 𝒕𝒉𝒆 𝒔𝒌𝒚 𝒔𝒉𝒊𝒇𝒕𝒔, 𝒉𝒆𝒓 𝒘𝒉𝒊𝒔𝒑𝒆𝒓𝒔 𝒄𝒊𝒓𝒄𝒍𝒆 𝒖𝒔.
+    <!-- LEFT: Transparent Hand Image -->
+    <img class="oracle-image" src="YOUR_TRANSPARENT_HAND_IMAGE_URL_HERE" alt="Oracle Hand" />
+
+    <!-- RIGHT: Whisper + Weather + Note -->
+    <div class="oracle-right">
+
+      <div class="oracle-whisper">
+        𝑾𝒉𝒆𝒏 𝒕𝒉𝒆 𝒔𝒌𝒚 𝒔𝒉𝒊𝒇𝒕𝒔, 𝒉𝒆𝒓 𝒘𝒉𝒊𝒔𝒑𝒆𝒓𝒔 𝒄𝒊𝒓𝒄𝒍𝒆 𝒖𝒔.
+      </div>
+
+      <div class="widget-container">
+        <a class="weatherwidget-io"
+           href="https://forecast7.com/en/25d76n80d19/miami/?unit=us"
+           data-label_1="THE ORACLE"
+           data-label_2="WHISPERS"
+           data-font="Tinos"
+           data-theme="original"
+           data-icons="none"
+           data-basecolor="rgba(15,17,19,0)"
+           data-textcolor="#d69eee"
+           data-highcolor="#ffa7d2"
+           data-lowcolor="#c7deff"
+           data-suncolor="#f4d799">
+           THE ORACLE WHISPERS
+        </a>
+      </div>
+
+      <div class="oracle-note">
+        𝑻𝒐𝒅𝒂𝒚 𝒔𝒉𝒆 𝒌𝒆𝒆𝒑𝒔 𝒉𝒆𝒓 𝒘𝒉𝒊𝒔𝒑𝒆𝒓𝒔 𝒕𝒐 𝒉𝒆𝒓𝒔𝒆𝒍𝒇, 𝒃𝒖𝒕 𝒕𝒉𝒆 𝒓𝒆𝒂𝒍𝒎 𝒊𝒔 𝒔𝒕𝒊𝒍𝒍 𝒘𝒂𝒕𝒄𝒉𝒊𝒏𝒈.
+      </div>
+
     </div>
-
-    <div class="widget-container">
-      <a class="weatherwidget-io"
-         href="https://forecast7.com/en/25d76n80d19/miami/?unit=us"
-         data-label_1="THE ORACLE"
-         data-label_2="WHISPERS"
-         data-font="Tinos"
-         data-theme="original"
-         data-icons="none"
-         data-basecolor="rgba(15,17,19,0)"
-         data-textcolor="#d69eee"
-         data-highcolor="#ffa7d2"
-         data-lowcolor="#c7deff"
-         data-suncolor="#f4d799">
-         THE ORACLE WHISPERS
-      </a>
-    </div>
-
   </div>
 
   <script>
