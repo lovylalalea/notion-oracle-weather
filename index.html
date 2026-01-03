@@ -9,61 +9,80 @@
       margin: 0;
       padding: 20px;
       background: #0f1113;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       font-family: "Tinos", serif;
       color: #d69eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .oracle-wrapper {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      max-width: 900px;
     }
 
     .oracle-image {
-      width: 260px;
+      width: 350px;
       border-radius: 14px;
       box-shadow: 0 0 22px rgba(214, 158, 238, 0.4);
-      margin-bottom: 18px;
+    }
+
+    .oracle-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 350px;
     }
 
     .oracle-whisper {
-      font-size: 15px;
-      text-align: center;
-      margin-bottom: 16px;
-      color: #e8dfff;
+      font-size: 16px;
+      margin-bottom: 18px;
       line-height: 1.6;
+      color: #e8dfff;
+      text-align: left;
     }
 
     .widget-container {
       width: 100%;
-      max-width: 350px;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Oracle Image -->
-  <img class="oracle-image" src="https://i.imgur.com/btVUuxb.png" alt="Oracle Hand" />
+  <div class="oracle-wrapper">
 
-  <!-- Whisper Line -->
-  <div class="oracle-whisper">
-    𝑾𝒉𝒆𝒏 𝒕𝒉𝒆 𝒔𝒌𝒚 𝒔𝒉𝒊𝒇𝒕𝒔, 𝒘𝒆 𝒇𝒆𝒆𝒍 𝒉𝒆𝒓 𝒐𝒏 𝒐𝒖𝒓 𝒉𝒂𝒏𝒅.
-  </div>
+    <!-- LEFT: Oracle Image -->
+    <img class="oracle-image" src="https://i.imgur.com/btVUuxb.png" alt="Oracle Hand" />
 
-  <!-- Weather Widget -->
-  <div class="widget-container">
-    <a class="weatherwidget-io"
-       href="https://forecast7.com/en/25d76n80d19/miami/?unit=us"
-       data-label_1="THE ORACLE"
-       data-label_2="WHISPERS"
-       data-font="Tinos"
-       data-theme="original"
-       data-icons="none"
-       data-basecolor="#0f1113"
-       data-textcolor="#d69eee"
-       data-highcolor="#ffa7d2"
-       data-lowcolor="#c7deff"
-       data-suncolor="#f4d799">
-       THE ORACLE WHISPERS
-    </a>
+    <!-- RIGHT: Whisper + Weather -->
+    <div class="oracle-right">
+
+      <div class="oracle-whisper">
+        𝑾𝒉𝒆𝒏 𝒕𝒉𝒆 𝒔𝒌𝒚 𝒔𝒉𝒊𝒇𝒕𝒔, 𝒉𝒆𝒓 𝒘𝒉𝒊𝒔𝒑𝒆𝒓𝒔 𝒄𝒊𝒓𝒄𝒍𝒆 𝒖𝒔.
+      </div>
+
+      <div class="widget-container">
+        <a class="weatherwidget-io"
+           href="https://forecast7.com/en/25d76n80d19/miami/?unit=us"
+           data-label_1="THE ORACLE"
+           data-label_2="WHISPERS"
+           data-font="Tinos"
+           data-theme="original"
+           data-icons="none"
+           data-basecolor="#0f1113"
+           data-textcolor="#d69eee"
+           data-highcolor="#ffa7d2"
+           data-lowcolor="#c7deff"
+           data-suncolor="#f4d799">
+           THE ORACLE WHISPERS
+        </a>
+      </div>
+
+    </div>
   </div>
 
   <script>
